@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" >
+                  $(document).ready(function() {
+            $('.minusper').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plusper').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                return false;
+            });
+        });
+
+            $(function(){
+            $("#telephonemask").mask("+380(99)999-99-99");
+            });
+  </script>
+  <meta charset="utf-8">
+</head>
+<body>
+ <a name="bm-fm-order"></a>
+<form class="contact-form" name="contact-form" rel="1" id="js-fm-order" data-timezone="2" data-days-until23="5,6" data-min-delivery-price="150" autocomplete="off" method="POST">
+<div class="cont_ord_bl">
+<div class="contacts_tabs">
+<div class="tabs_head"></div>
+<div class="tab_cont active">
+<div class="tab_block"></div>
+<p class="form_title" align="center">Адреса замовлення</p> <hr> <br /> <br />                                                   
+<div class="cust-data-zaml">
+<div class="layer1" align="center">
+<label for="names"><font style="color:red;">*</font>ІМ'Я</label> <br />
+<input required type="text" name="names" id='names' placeholder="Введіть ваше ім'я"/>
+<br />  <br />
+<label for="telephone"><font style="color:red;">*</font>ТЕЛЕФОН</label> <br />
+<input required placeholder="+380(__) ___-__-__" type="tel" name="telephone" id='telephonemask'/> <br />  <br />     
+<label for="city">НАСЕЛЕНИЙ ПУНКТ</label> <br />
+                                    <select style="font: 18px sans-serif;  " name="city" id='city'>
+                                        <option>Тернопіль</option>
+                                        <option>с.Байківці</option>
+                                        <option>с.Березовиця</option>
+                                        <option>с.Біла</option>
+                                        <option>с.Великі Гаї</option>
+                                        <option>с.Гаї Гречинські</option>
+                                        <option>с.Гаї Ходоровські</option>
+                                        <option>с.Гаї Шевченківські</option>
+                                        <option>с.Кутківці</option>
+                                        <option>с.Острів</option>
+                                        <option>с.Петриків</option>
+                                        <option>с.Підгороднє</option>
+                                        <option>с.Пронятин</option>
+                                        <option>с.Смиківці</option>
+                                        <option>с.Чистилів</option>
+</select>
+                                    <br />  <br />
+
+                                    <label for="street"><font style="color:red;">*</font>ВУЛИЦЯ</label> <br />
+                                    <input required type="text" name="street" id='street'/> <br />  <br />
+
+                                    <label  for="hous"><font style="color:red;">*</font>БУДИНОК</label> <br />
+                                    <input required type="text" name="hous" id='hous'/> <br />  <br />
+
+                                    <label for="appt">КВАРТИРА</label> <br />
+                                    <input type="text" name="appt" id='appt'/> <br />  <br />
+
+                                    <label for="piizd">ПІД'ЇЗД</label> <br />
+                                    <input type="text" name="piizd" id='piizd'/> <br />  <br />
+
+                                    <label for="flor">ПОВЕРХ</label> <br />
+                                    <input type="text" name="flor" id='flor'/> <br />  <br />
+
+                                    <label for="domofon">ДОМОФОН</label> <br />
+                                    <input type="text" name="domofon" id='domofon'/> <br />  <br />
+                                     </div>
+
+                                     <div class="layer2" align="center">                                     
+                                    <label for="person_qty">КІЛЬКІСТЬ ПЕРСОН</label> <br />
+
+                                    <div class="number">
+                                    <span style="margin-right: 0px;"class="minusper">-</span>
+
+                                    <input style="width: 30px;" type="text" name="person_qty" value="1" id='person_qty'/> 
+                                    <span class="plusper">+</span>
+                                    </div>
+
+                                    <label style="padding-top: 17px;" for="kopyur">КУПЮРИ ДЛЯ ОПЛАТИ</label> <br />
+                                    <input type="text" name="kopyur" id='kopyur'/> <br />  <br />
+
+                                    
+                                    <label style= "color: #ffb718;  /*background-color: gainsboro;*/ " for="oplata">СПОСІБ ОПЛАТИ </label> <br /> <br />
+                                    <input align="left" style="display: inline-block; position: relative; width: 16px; height: 16px; margin: -1px 10px 0 0; border: 1px solid #0000f3; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; vertical-align: middle; cursor: pointer; z-index: 1;" type="radio" name="oplata1" checked="checked" id="oplata" value="Готівка">ОПЛАТА ГОТІВКОЮ<br><br />
+
+                                    <input align="left" style="display: inline-block; position: relative; width: 16px; height: 16px; margin: -1px 10px 0 0; border: 1px solid #0000f3; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; vertical-align: middle; cursor: pointer; z-index: 1;" id="oplata" type="radio" name="oplata1" value="Карта">ОПЛАТА КАРТОЮ<br> <br />
+                                    
+                                    <div class="card_img">
+                                    <img style="width: 45px; height: 45px; margin: auto;" src="visa.png">
+                                    <img style="width: 45px; height: 45px; margin: auto;" src="mastercard.png">
+                                                        
+                                    </div>
+
+                                    <label style="color: #ffb718;/*background-color: gainsboro;*/" for="komentary">КОМЕНТАР ДО ЗАМОВЛЕННЯ</label> <br /> <br />
+                                    <textarea style="resize: none;" cols="34" rows="6" name="komentary" id="komentary"></textarea>
+                                    
+                                    <div>
+                                        <img align="right" style="padding-top:45px;width: 150px; height: 114px; margin: auto;" src="delivery.png">
+                                    </div>
+                                    
+                                    </div>
+                                
+                                </div> <br />
+                                <button type="submit" name="subm" class="btn_form">Замовити</button>
+                            </div>
+<style type="text/css">
+    .btn_form {
+    width: 100%;
+    background: #ffb209;
+    line-height: 42px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    padding: 0;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+</style>
+</body>
+
+</html>
